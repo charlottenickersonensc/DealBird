@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --font-size: 16px;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  
+  /* Foresty, calming color palette */
+  --sage-50: #f7f9f7;
+  --sage-100: #e8f0e8;
+  --sage-200: #d4e4d4;
+  --sage-300: #b3d4b3;
+  --sage-400: #8ab88a;
+  --sage-500: #6b9d6b;
+  --sage-600: #527d52;
+  --sage-700: #3d5e3d;
+  --sage-800: #2c442c;
+  --sage-900: #1e2f1e;
+  
+  --moss-50: #f5f7f4;
+  --moss-100: #e5ebe3;
+  --moss-200: #cdd9c9;
+  --moss-300: #a8bfa3;
+  --moss-400: #7a9a73;
+  --moss-500: #5a7a54;
+  --moss-600: #456343;
+  --moss-700: #364d34;
+  --moss-800: #2a3c29;
+  --moss-900: #1f2e1e;
+  
+  --earth-50: #faf8f6;
+  --earth-100: #f0ebe5;
+  --earth-200: #e3d9ce;
+  --earth-300: #cec0b0;
+  --earth-400: #b3a091;
+  --earth-500: #988373;
+  --earth-600: #7d6a5c;
+  --earth-700: #635447;
+  --earth-800: #4d4237;
+  --earth-900: #3a322a;
+  
+  /* Glass morphism variables */
+  --glass-blur: 24px;
+  --glass-opacity: 0.7;
+  
+  /* Color tokens with natural, calming palette */
+  --background: var(--sage-50);
+  --foreground: var(--sage-900);
+  --card: rgba(255, 255, 255, 0.65);
+  --card-foreground: var(--sage-900);
+  --popover: rgba(255, 255, 255, 0.85);
+  --popover-foreground: var(--sage-900);
+  --primary: var(--sage-700);
+  --primary-foreground: var(--sage-50);
+  --secondary: var(--moss-100);
+  --secondary-foreground: var(--moss-800);
+  --muted: var(--sage-200);
+  --muted-foreground: var(--sage-600);
+  --accent: var(--moss-200);
+  --accent-foreground: var(--moss-900);
+  --destructive: #c85a54;
+  --destructive-foreground: #ffffff;
+  --border: rgba(107, 157, 107, 0.15);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.5);
+  --switch-background: var(--sage-300);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--sage-400);
+  
+  /* Chart colors with natural tones */
+  --chart-1: var(--sage-500);
+  --chart-2: var(--moss-500);
+  --chart-3: var(--earth-500);
+  --chart-4: #7ba899;
+  --chart-5: #9b8b7e;
+  
+  --radius: 1rem;
+  --sidebar: rgba(247, 249, 247, 0.8);
+  --sidebar-foreground: var(--sage-900);
+  --sidebar-primary: var(--sage-700);
+  --sidebar-primary-foreground: var(--sage-50);
+  --sidebar-accent: var(--sage-100);
+  --sidebar-accent-foreground: var(--sage-800);
+  --sidebar-border: rgba(107, 157, 107, 0.1);
+  --sidebar-ring: var(--sage-400);
+}
+
+.dark {
+  --background: var(--sage-900);
+  --foreground: var(--sage-50);
+  --card: rgba(30, 47, 30, 0.7);
+  --card-foreground: var(--sage-50);
+  --popover: rgba(30, 47, 30, 0.85);
+  --popover-foreground: var(--sage-50);
+  --primary: var(--sage-400);
+  --primary-foreground: var(--sage-900);
+  --secondary: var(--sage-800);
+  --secondary-foreground: var(--sage-100);
+  --muted: var(--sage-800);
+  --muted-foreground: var(--sage-400);
+  --accent: var(--moss-800);
+  --accent-foreground: var(--sage-100);
+  --destructive: #d77771;
+  --destructive-foreground: var(--sage-900);
+  --border: rgba(107, 157, 107, 0.2);
+  --input: rgba(107, 157, 107, 0.1);
+  --ring: var(--sage-500);
+  --sidebar: rgba(30, 47, 30, 0.8);
+  --sidebar-foreground: var(--sage-50);
+  --sidebar-primary: var(--sage-400);
+  --sidebar-primary-foreground: var(--sage-900);
+  --sidebar-accent: var(--sage-800);
+  --sidebar-accent-foreground: var(--sage-100);
+  --sidebar-border: rgba(107, 157, 107, 0.15);
+  --sidebar-ring: var(--sage-500);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    outline-color: color-mix(in srgb, var(--ring) 50%, transparent);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(179, 212, 179, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(122, 154, 115, 0.06) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+  
+  /* Serif fonts for headings and important text */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Pro', Georgia, serif;
+  }
+}
+
+/**
+ * Base typography with serif fonts for headings
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.6;
+    }
+
+    label {
+      font-size: var(--text-sm);
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Liquid glass morphism utility classes */
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 8px 32px 0 rgba(107, 157, 107, 0.08),
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 
+      0 12px 48px 0 rgba(107, 157, 107, 0.12),
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+  }
+  
+  .glass-header {
+    background: rgba(247, 249, 247, 0.8);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(107, 157, 107, 0.1);
+  }
+  
+  .gradient-sage {
+    background: linear-gradient(135deg, var(--sage-500) 0%, var(--moss-600) 100%);
+  }
+  
+  .gradient-earth {
+    background: linear-gradient(135deg, var(--earth-400) 0%, var(--sage-500) 100%);
+  }
+  
+  .smooth-shadow {
+    box-shadow: 
+      0 2px 8px -2px rgba(107, 157, 107, 0.1),
+      0 4px 16px -4px rgba(107, 157, 107, 0.08);
+  }
+  
+  .smooth-shadow-lg {
+    box-shadow: 
+      0 4px 16px -2px rgba(107, 157, 107, 0.12),
+      0 8px 32px -4px rgba(107, 157, 107, 0.1);
+  }
+}
+
+/* Smooth transitions for all interactive elements */
+@layer base {
+  button, a, input, select, textarea {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Custom scrollbar styling */
+@layer base {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(107, 157, 107, 0.3);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(107, 157, 107, 0.5);
+    background-clip: content-box;
+  }
+}
