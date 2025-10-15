@@ -348,7 +348,7 @@ export function EmployeeProfile({ employeeId, onBack, onAssignTraining }: Employ
                           yAxisId="left"
                           type="monotone"
                           dataKey="score"
-                          stroke="#3b82f6"
+                          stroke="var(--chart-1)"
                           strokeWidth={2}
                           name="Score"
                         />
@@ -356,7 +356,7 @@ export function EmployeeProfile({ employeeId, onBack, onAssignTraining }: Employ
                           yAxisId="right"
                           type="monotone"
                           dataKey="deals"
-                          stroke="#10b981"
+                          stroke="var(--chart-2)"
                           strokeWidth={2}
                           name="Deals"
                         />
@@ -379,8 +379,8 @@ export function EmployeeProfile({ employeeId, onBack, onAssignTraining }: Employ
                           <PolarAngleAxis dataKey="skill" />
                           <Radar
                             dataKey="value"
-                            stroke="#8b5cf6"
-                            fill="#8b5cf6"
+                            stroke="var(--chart-3)"
+                            fill="var(--chart-3)"
                             fillOpacity={0.6}
                           />
                         </RadarChart>

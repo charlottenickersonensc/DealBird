@@ -348,7 +348,7 @@ export function StakeholderMap({ user, clientId, onBack }: StakeholderMapProps) 
                             y1={`${stakeholder.y}%`}
                             x2={`${target.x}%`}
                             y2={`${target.y}%`}
-                            stroke="#cbd5e1"
+                            stroke="var(--sage-300)"
                             strokeWidth="2"
                             strokeDasharray="5,5"
                           />

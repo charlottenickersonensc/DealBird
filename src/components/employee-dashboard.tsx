@@ -251,9 +251,9 @@ export function EmployeeDashboard({
                     <Line
                       type="monotone"
                       dataKey="score"
-                      stroke="#3b82f6"
+                      stroke="var(--chart-1)"
                       strokeWidth={2}
-                      dot={{ fill: '#3b82f6', r: 4 }}
+                      dot={{ fill: 'var(--chart-1)', r: 4 }}
                     />
                   </LineChart>
                 </ResponsiveContainer>
@@ -274,8 +274,8 @@ export function EmployeeDashboard({
                       <PolarAngleAxis dataKey="skill" />
                       <Radar
                         dataKey="value"
-                        stroke="#8b5cf6"
-                        fill="#8b5cf6"
+                        stroke="var(--chart-2)"
+                        fill="var(--chart-2)"
                         fillOpacity={0.6}
                       />
                     </RadarChart>

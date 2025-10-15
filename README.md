@@ -1,6 +1,6 @@
-# Public Speaking App
+# DealBird
 
-A Vite-powered React + TypeScript front-end that will evolve into the Public Speaking App. The repository currently contains the scaffolded project along with a working build pipeline.
+A Vite-powered React + TypeScript front-end that will evolve into DealBird. The repository currently contains the scaffolded project along with a working build pipeline.
 
 ## Prerequisites
 
@@ -35,5 +35,5 @@ npm run build
 
 ## Next Steps
 
-- Replace the default React content in `src/App.tsx` with the initial Public Speaking App UI.
+- Replace the default React content in `src/App.tsx` with the initial DealBird UI.
 - Add automated tests and CI as features solidify.

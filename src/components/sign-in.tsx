@@ -55,7 +55,7 @@ export function SignIn({ onSignIn }: SignInProps) {
       
       <div className="w-full max-w-md space-y-8">
         <div className="text-center space-y-3">
-          <h1 className="text-5xl tracking-tight">NegotiateAI</h1>
+          <h1 className="text-5xl tracking-tight">DealBird</h1>
           <p className="text-sage-700 text-lg">
             Master negotiation skills through mindful, AI-powered practice
           </p>

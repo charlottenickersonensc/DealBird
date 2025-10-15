@@ -341,16 +341,16 @@ export function ManagerDashboard({
                         yAxisId="left"
                         type="monotone"
                         dataKey="deals"
-                        fill="#3b82f6"
-                        stroke="#2563eb"
+                        fill="var(--chart-1)"
+                        stroke="var(--chart-1)"
                         fillOpacity={0.6}
                       />
                       <Area
                         yAxisId="right"
                         type="monotone"
                         dataKey="value"
-                        fill="#10b981"
-                        stroke="#059669"
+                        fill="var(--chart-2)"
+                        stroke="var(--chart-2)"
                         fillOpacity={0.6}
                       />
                     </AreaChart>
@@ -378,9 +378,9 @@ export function ManagerDashboard({
                       <Line
                         type="monotone"
                         dataKey="avgScore"
-                        stroke="#8b5cf6"
+                        stroke="var(--chart-3)"
                         strokeWidth={3}
-                        dot={{ fill: "#8b5cf6", r: 4 }}
+                        dot={{ fill: "var(--chart-3)", r: 4 }}
                       />
                     </LineChart>
                   </ResponsiveContainer>
